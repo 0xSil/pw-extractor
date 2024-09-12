@@ -18,31 +18,25 @@ This Python script processes `.txt` log files from a specified folder, extracts 
 
 ## Usage
 
-### 1. Clone the repository or download the script.
+### 1. Coppy Flipper Zero Evilportal Log files to your Computer
+### 2. Clone the repository or download the script.
 
-```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone [https://github.com/your-username/your-repo-name.git](https://github.com/0xSil/pw-extractor.git)
 
-2. Navigate to the folder where the script is located.
+### 3. Navigate to the folder where the script is located.
 
-bash
+cd pw-extractor
 
-cd your-repo-name
+### 4. Run the script with Python.
 
-3. Run the script with Python.
-
-bash
-
-python parse_logs.py -i <input_folder> -o <output_file>
+python pw-extractor.py -i <input_folder> -o <output_file>
 
 Parameters:
 
     -i or --input: Specifies the folder that contains the .txt log files to be processed.
     -o or --output: Specifies the output file where the results will be stored. If this file exists, it will be overwritten.
 
-Example Usage
-
-bash
+### Example Usage
 
 python parse_logs.py -i ./logs -o ./output/parsed_results.txt
 
@@ -65,15 +59,15 @@ Setap Value: log parsing - test2
 u: user3@example.com p: password3
 u: user4@example.com p: password4
 
-Additional Notes
+### Additional Notes
 
     Handling Duplicates: If a u: line appears multiple times in the same file, it will only be written once in the output.
     Renaming: Files that already have the prefix extracted_ will not be renamed again.
     Multiple Files: You can place multiple .txt files in the input folder, and the script will aggregate all results into one output file.
 
-Example Output
+### Example Output
 
-If two log files are processed, the output file might look like this:
+If two log files are processed with two different AP names, the output file might look like this:
 
 Setap Value: log parsing - test
 u: user1@test.com p: password1
@@ -83,7 +77,7 @@ Setap Value: log parsing - test2
 u: user3@test.com p: password3
 u: user4@test.com p: password4
 
-How It Works
+### How It Works
 
     Setap Value Parsing: The script looks for lines starting with #setap= in the log files and captures the value after the equal sign.
     User Data Extraction: It captures all lines starting with u:, which typically contain usernames and passwords.
@@ -91,12 +85,10 @@ How It Works
     Output Writing: After all log files are processed, the results are written to the specified output file in a structured format.
     File Renaming: Once a file is processed, it is renamed with the prefix extracted_ to ensure it isn't reprocessed during future runs.
 
-Contributing
+### Contributing
 
 Feel free to contribute by opening an issue or submitting a pull request. For major changes, please open an issue first to discuss what you would like to change.
 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 
 
