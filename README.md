@@ -21,15 +21,15 @@ This Python script processes `.txt` log files from Flipper Zero Evilportal in a 
 ### 1. Coppy Flipper Zero Evilportal Log files to your Computer
 ### 2. Clone the repository or download the script.
 
-git clone https://github.com/0xSil/pw-extractor.git
+    git clone https://github.com/0xSil/pw-extractor.git
 
 ### 3. Navigate to the folder where the script is located.
 
-cd pw-extractor
+    cd pw-extractor
 
 ### 4. Run the script with Python.
 
-python pw-extractor.py -i <input_folder> -o <output_file>
+    python pw-extractor.py -i <input_folder> -o <output_file>
 
 Parameters:
 
@@ -49,33 +49,25 @@ What Happens:
         Removes duplicate u: lines within the same log file.
         Groups the u: lines under the corresponding Setap Value.
         Renames the file by adding the extracted_ prefix, so it won't be reprocessed.
-    It writes all extracted data to the output file in the following format:
+        It writes all extracted data to the output file.
 
-Setap Value: log parsing - test
-u: user1@example.com p: password1
-u: user2@example.com p: password2
+### Example Output
 
-Setap Value: log parsing - test2
-u: user3@example.com p: password3
-u: user4@example.com p: password4
+If two log files are processed with two different AP names, the output file might look like this:
+
+    Setap Value: log parsing - test
+    u: user1@test.com p: password1
+    u: user2@test.com p: password2
+
+    Setap Value: log parsing - test2
+    u: user3@test.com p: password3
+    u: user4@test.com p: password4
 
 ### Additional Notes
 
     Handling Duplicates: If a u: line appears multiple times in the same file, it will only be written once in the output.
     Renaming: Files that already have the prefix extracted_ will not be renamed again.
     Multiple Files: You can place multiple .txt files in the input folder, and the script will aggregate all results into one output file.
-
-### Example Output
-
-If two log files are processed with two different AP names, the output file might look like this:
-
-Setap Value: log parsing - test
-u: user1@test.com p: password1
-u: user2@test.com p: password2
-
-Setap Value: log parsing - test2
-u: user3@test.com p: password3
-u: user4@test.com p: password4
 
 ### How It Works
 
