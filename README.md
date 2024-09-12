@@ -34,7 +34,7 @@ python pw-extractor.py -i <input_folder> -o <output_file>
 Parameters:
 
     -i or --input: Specifies the folder that contains the .txt log files to be processed.
-    -o or --output: Specifies the output file where the results will be stored. If this file exists, it will be overwritten.
+    -o or --output: Specifies the output file where the results will be stored. If this file exists, the extracted data will be appended. If theres already the AP defined, the data will be added to the AP's list.
 
 ### Example Usage
 
