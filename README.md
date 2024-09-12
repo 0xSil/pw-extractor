@@ -1,6 +1,6 @@
 # Log File Parser and Extractor
 
-This Python script processes `.txt` log files from a specified folder, extracts user information, and organizes the data in a structured output file. It also renames the parsed log files by adding an `extracted_` prefix, ensuring files aren't processed multiple times.
+This Python script processes `.txt` log files from Flipper Zero Evilportal in a specified folder, extracts user information, and organizes the data in a structured output file. It also renames the parsed log files by adding an `extracted_` prefix, ensuring files aren't processed multiple times.
 
 ## Features
 
