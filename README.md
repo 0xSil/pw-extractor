@@ -21,7 +21,7 @@ This Python script processes `.txt` log files from Flipper Zero Evilportal in a 
 ### 1. Coppy Flipper Zero Evilportal Log files to your Computer
 ### 2. Clone the repository or download the script.
 
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/0xSil/pw-extractor.git)
+git clone https://github.com/0xSil/pw-extractor.git
 
 ### 3. Navigate to the folder where the script is located.
 
