@@ -34,7 +34,7 @@ This Python script processes `.txt` log files from Flipper Zero Evilportal in a 
 Parameters:
 
     -i or --input: Specifies the folder that contains the .txt log files to be processed.
-    -o or --output: Specifies the output file where the results will be stored. If this file exists, the extracted data will be appended. If theres already the AP defined, the data will be added to the AP's list.
+    -o or --output: Specifies the output file where the results will be stored. If this file exists, the extracted data will be appended. If theres already the AP defined in the output file, the data will be added to the AP's list.
 
 ### Example Usage
 
